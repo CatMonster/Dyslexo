@@ -38,13 +38,13 @@ public class Tray {
 
             application.setDockIconImage(image);
             application.setDockMenu(popupMenu);
-            /*application.setAboutHandler(e -> {
+            application.setAboutHandler(e -> {
                 try {
                     getAbout().show();
                 } catch (IOException | FontFormatException e1) {
                     e1.printStackTrace();
                 }
-            });*/
+            });
         }
         else if(Software.getOS().equals(Software.windows) || Software.getOS().equals(Software.linux) && SystemTray.isSupported()) {
             TrayIcon trayIcon = new TrayIcon(image);
